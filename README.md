@@ -40,7 +40,7 @@ The model is capable of detecting objects from the COCO dataset, and the applica
 
 2. Install the required dependencies:
     ```bash
-    pip install -r requirements.txt
+    pip install flask numpy opencv-python torch torchvision
     ```
 
 ## Usage
