@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Object Detection with Faster R-CNN</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="file-input-container">
+            <label for="file-upload" class="custom-file-upload">
+                Upload Image
+            </label>
+            <input id="file-upload" type="file" name="image" accept="image/*" required>
+            <button type="submit">Detect Objects</button>
+        </div>
+    </form>
+    {% if image %}
+        <img src="data:image/png;base64,{{ image }}" alt="Detected Objects">
+        <div class="labels-scores-container">
+            {% for label_score in labels_scores %}
+                <div class="label-score">{{ label_score }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</body>
+</html>
