@@ -34,8 +34,8 @@ The model is capable of detecting objects from the COCO dataset, and the applica
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/object-detection.git
-    cd object-detection
+    git clone https://github.com/eslammohamedtolba/ObjectDetection-FasterRCNN-PreTrained.git
+    cd ObjectDetection-FasterRCNN-PreTrained
     ```
 
 2. Install the required dependencies:
